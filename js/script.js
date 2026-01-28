@@ -22,6 +22,7 @@ function updatePreview(){
     p_person_name.textContent = person_name.value;
     p_incident_title.textContent = incident_name.value;
     p_description.innerHTML = description.value.replace(/\n/g,"<br>");
+    p_prepared.innerHTML = prepared.value.replace(/\n/g,"<br>");
     p_received.innerHTML = received.value.replace(/\n/g,"<br>");
 }
 

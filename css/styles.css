@@ -1,9 +1,10 @@
 body { font-family: Arial, sans-serif; margin: 0; }
-.container { display: flex; height: 100vh; }
+.container { display: flex; height: 150vh; }
 
 /* FORM */
 .form-section {
     width: 40%;
+    height: 150vh;
     padding: 30px 25px;
     background: #f5f6fa;
     display: flex;
@@ -25,7 +26,7 @@ body { font-family: Arial, sans-serif; margin: 0; }
     font-family: Arial, sans-serif;
     background-color: #fff;
 }
-.form-section textarea { height: 90px; resize: vertical; }
+.form-section textarea { height: 200px; resize: vertical; }
 .form-section input:focus, .form-section textarea:focus { border-color: #4a69bd; box-shadow: 0 0 6px rgba(74,105,189,0.2); outline: none; }
 .form-section button {
     background-color: #4a4ad0;
