@@ -111,7 +111,7 @@ body { font-family: Arial, sans-serif; margin: 0; }
     body { margin: 0; }
     .form-section { display: none; }
     .preview-section { width: 100%; padding: 0; background: none; overflow: visible !important; display: flex; justify-content: center; align-items: flex-start; }
-    .preview-box { width: 100%; min-height: 100%; margin: 0; padding: 0.7in; border: none; box-shadow: none; background: #fff; box-sizing: border-box; }
+    .preview-box { width: 100%; min-height: 100%; margin: 0; padding: 0.7in; border: none; box-shadow: none; background: #fff; box-sizing: border-box; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
     .handle { display: none !important; }
 }
 
