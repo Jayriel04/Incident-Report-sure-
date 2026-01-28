@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incident Report – Live Preview</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container">
+    <!-- FORM -->
+    <div class="form-section">
+        <h2>Incident Report Form</h2>
+
+        <label for="ref">Reference Number:</label>
+        <input type="text" id="ref" oninput="capitalizeFirstLetter(this); updatePreview()">
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" oninput="updatePreview()">
+
+        <label for="person_name">Location:</label>
+        <input type="text" id="person_name" oninput="capitalizeFirstLetter(this); updatePreview()">
+
+        <label for="department">Department:</label>
+        <input type="text" value="Accounting" readonly>
+
+        <label for="incident_name">Incident Title:</label>
+        <input type="text" id="incident_name" oninput="capitalizeFirstLetter(this); updatePreview()">
+
+        <label for="description">Letter Body:</label>
+        <textarea id="description" oninput="capitalizeFirstLetter(this); updatePreview()"></textarea>
+
+        <label for="incident_images">Upload Incident Image(s):</label>
+        <input type="file" accept="image/*" id="incident_images" multiple onchange="previewImages(event)">
+
+        <label for="received">Received By:</label>
+        <textarea id="received" placeholder="Enter name/position" oninput="capitalizeFirstLetter(this); updatePreview()"></textarea>
+
+        <button onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview-section">
+        <div class="preview-box">
+
+            <div class="header-row">
+                <img src="image/logo.jpg" class="logo">
+                <div class="header-text">
+                    <p class="company-name">J Tower Residences Condo Corporation Inc.</p>
+                    <p class="company-address">
+                        L. Jayme St, Bakilid Mandaue City 6014, Cebu
+                    </p>
+                </div>
+                <img src="image/logo2.jpg" class="logo">
+            </div>
+
+            <h2 class="report-title">INCIDENT REPORT</h2>
+
+            <p><strong>Reference Number:</strong> <span id="p_ref"></span></p>
+            <p><strong>Date:</strong> <span id="p_date"></span></p>
+            <p><strong>Location:</strong> <span id="p_person_name"></span></p>
+            <p><strong>Department:</strong> Accounting</p>
+            <p><strong>Incident Title:</strong> <span id="p_incident_title"></span></p>
+            <p id="p_description"></p>
+
+            <p><strong>Incident Image(s):</strong></p>
+            <div id="p_images_container"></div>
+
+            <div class="signature-row">
+                <div class="signature-block">
+                    <p><strong>Prepared by:</strong></p>
+                    <p class="name">Lindon C. Cayao</p>
+                    <p class="position">Master Reader - PMO</p>
+                    <div class="received-block">
+                        <p><strong>Received by:</strong></p>
+                        <p class="name"><span id="p_received"></span></p>
+                    </div>
+                </div>
+                <div class="signature-block">
+                    <p><strong>Noted by:</strong></p>
+                    <p class="name">Michael P. Resilosa</p>
+                    <p class="position">Finance & Accounting Manager</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
